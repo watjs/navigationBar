@@ -74,7 +74,7 @@ export const NavigationBar = (props) => {
       <nav
         data-testid="navigation"
         ref={navElRef}
-        className={`navigation-bar ${showIndicator && "navigation-bar--show-border"}`}
+        className={`navigation-bar${showIndicator ? " navigation-bar--show-border" : ""}`}
         aria-label="Cities"
       >
         <ul className="navigation-bar__list">

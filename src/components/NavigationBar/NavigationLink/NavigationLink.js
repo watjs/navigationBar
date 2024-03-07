@@ -36,7 +36,7 @@ export const NavigationLink = ({
       <span
         data-testid="navigation-link"
         ref={elementRef}
-        className={`navigation-link ${isActive && "navigation-link--active"}`}
+        className={`navigation-link navigation-link--active`}
         title={text}
       >
         {text}
