@@ -11,6 +11,7 @@ export const NavigationLink = ({
   isActive,
   onSelect,
   onResize,
+  showIndicator,
 }) => {
   const elementRef = useRef();
 
@@ -21,6 +22,9 @@ export const NavigationLink = ({
   const resizeHandlerWithDebounce = debounce(resizeHandler);
 
   useEffect(() => {
+    if (!showIndicator) {
+      return;
+    }
     if (isActive) {
       window.addEventListener("resize", resizeHandlerWithDebounce);
     }
@@ -29,7 +33,7 @@ export const NavigationLink = ({
         window.removeEventListener("resize", resizeHandlerWithDebounce);
       }
     };
-  }, [isActive, resizeHandlerWithDebounce]);
+  }, [showIndicator, isActive, resizeHandlerWithDebounce]);
 
   if (isActive) {
     return (
@@ -66,4 +70,5 @@ NavigationLink.propTypes = {
   isActive: PropTypes.bool,
   onSelect: PropTypes.func.isRequired,
   onResize: PropTypes.func.isRequired,
+  showIndicator: PropTypes.bool.isRequired,
 };

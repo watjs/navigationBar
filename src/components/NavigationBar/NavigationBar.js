@@ -87,6 +87,7 @@ export const NavigationBar = (props) => {
                 onSelect={onSelect}
                 onResize={onResize}
                 isActive={item.isActive}
+                showIndicator={showIndicator}
               />
             </li>
           ))}
