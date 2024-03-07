@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px 20px;
+}
+
+.app {
+  &__main {
+    padding: 0 50px;
+    margin-top: 50px;
+  }
+}

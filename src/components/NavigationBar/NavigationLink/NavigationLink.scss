@@ -1,0 +1,22 @@
+$defaultColor: #a3a3a3;
+$hoverColor: #5386ac;
+$activeColor: #000;
+
+.navigation-link {
+  color: $defaultColor;
+  text-decoration: none;
+  user-select: none;
+
+  &:hover {
+    color: $hoverColor;
+  }
+
+  &--active {
+    color: $activeColor;
+    cursor: default;
+
+    &:hover {
+      color: $activeColor;
+    }
+  }
+}
